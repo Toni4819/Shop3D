@@ -3,15 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <title>Shop Commande</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; }
+    .produit { border: 1px solid #ddd; padding: 10px; margin: 20px; display: inline-block; width: 200px; }
+    .produit img { width: 100%; height: auto; }
+    button { padding: 8px 12px; margin-top: 10px; }
+  </style>
 </head>
 <body>
-  <h1>Commander un produit</h1>
-  <form action="https://formsubmit.co/TON_EMAIL" method="POST">
-    <input type="text" name="nom" placeholder="Votre nom" required><br><br>
-    <input type="text" name="produit" placeholder="Nom du produit" required><br><br>
-    <input type="email" name="email" placeholder="Votre email" required><br><br>
-    <textarea name="message" placeholder="Infos supplémentaires" rows="4"></textarea><br><br>
-    <button type="submit">Envoyer la commande</button>
-  </form>
+
+  <h1>Mon Shop</h1>
+
+  <div class="produit">
+    <img src="https://via.placeholder.com/200x150" alt="Produit 1">
+    <h3>Produit 1</h3>
+    <p>Description rapide du produit 1.</p>
+    <form action="https://formsubmit.co/TON_EMAIL" method="POST">
+      <input type="hidden" name="produit" value="Produit 1">
+      <input type="text" name="nom" placeholder="Votre nom" required><br>
+      <input type="email" name="email" placeholder="Votre email" required><br>
+      <button type="submit">Commander</button>
+    </form>
+  </div>
+
+  <div class="produit">
+    <img src="https://via.placeholder.com/200x150" alt="Produit 2">
+    <h3>Produit 2</h3>
+    <p>Description rapide du produit 2.</p>
+    <form action="https://formsubmit.co/TON_EMAIL" method="POST">
+      <input type="hidden" name="produit" value="Produit 2">
+      <input type="text" name="nom" placeholder="Votre nom" required><br>
+      <input type="email" name="email" placeholder="Votre email" required><br>
+      <button type="submit">Commander</button>
+    </form>
+  </div>
+
+  <div class="produit">
+    <img src="https://via.placeholder.com/200x150" alt="Produit 3">
+    <h3>Produit 3</h3>
+    <p>Description rapide du produit 3.</p>
+    <form action="https://formsubmit.co/TON_EMAIL" method="POST">
+      <input type="hidden" name="produit" value="Produit 3">
+      <input type="text" name="nom" placeholder="Votre nom" required><br>
+      <input type="email" name="email" placeholder="Votre email" required><br>
+      <button type="submit">Commander</button>
+    </form>
+  </div>
+
+  <div class="produit">
+    <img src="https://via.placeholder.com/200x150" alt="Produit 4">
+    <h3>Produit 4</h3>
+    <p>Description rapide du produit 4.</p>
+    <form action="https://formsubmit.co/TON_EMAIL" method="POST">
+      <input type="hidden" name="produit" value="Produit 4">
+      <input type="text" name="nom" placeholder="Votre nom" required><br>
+      <input type="email" name="email" placeholder="Votre email" required><br>
+      <button type="submit">Commander</button>
+    </form>
+  </div>
+
 </body>
 </html>
