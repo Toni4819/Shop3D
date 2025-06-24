@@ -1,0 +1,5 @@
+body { font-family: sans-serif; text-align: center; }
+.produit { border: 1px solid #ddd; padding: 10px; margin: 20px; display: inline-block; width: 200px; vertical-align: top; }
+.produit img { width: 100%; height: auto; }
+button { padding: 8px 12px; margin-top: 10px; }
+input, textarea { width: 90%; margin-bottom: 8px; }
