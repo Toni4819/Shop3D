@@ -1,4 +1,4 @@
-const email = 'TON_EMAIL'; // remplace par ton adresse mail
+const email = 'capber.antoine@gmail.com'; // remplace par ton adresse mail
 
 const produits = [
   { nom: 'Produit 1', img: 'https://via.placeholder.com/200x150', desc: 'Description rapide 1' },
