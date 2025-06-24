@@ -1,25 +1,39 @@
-const email = 'capber.antoine@gmail.com'; // remplace ton email ici
-
 const produits = [
-  { nom: 'Produit 1', img: 'https://via.placeholder.com/200x150', desc: 'Description rapide 1' },
-  { nom: 'Produit 2', img: 'https://via.placeholder.com/200x150', desc: 'Description rapide 2' },
-  { nom: 'Produit 3', img: 'https://via.placeholder.com/200x150', desc: 'Description rapide 3' },
-  { nom: 'Produit 4', img: 'https://via.placeholder.com/200x150', desc: 'Description rapide 4' },
+  {
+    nom: "Produit 1",
+    image: "lien_vers_image1.jpg",
+    description: "Description du produit 1"
+  },
+  {
+    nom: "Produit 2",
+    image: "lien_vers_image2.jpg",
+    description: "Description du produit 2"
+  },
+  {
+    nom: "Produit 3",
+    image: "lien_vers_image3.jpg",
+    description: "Description du produit 3"
+  },
+  {
+    nom: "Produit 4",
+    image: "lien_vers_image4.jpg",
+    description: "Description du produit 4"
+  }
 ];
 
-const container = document.getElementById('produits');
-
-produits.forEach((p, index) => {
-  const div = document.createElement('div');
-  div.className = 'produit';
-  div.innerHTML = `
-    <img src="${p.img}" alt="${p.nom}">
-    <h3>${p.nom}</h3>
-    <p>${p.desc}</p>
-    <button onclick="afficherForm(${index})">Commander</button>
-  `;
-  container.appendChild(div);
-});
+function afficherProduits() {
+  const liste = document.getElementById("liste-produits");
+  produits.forEach((produit, index) => {
+    liste.innerHTML += `
+      <div class="produit">
+        <img src="${produit.image}" alt="${produit.nom}">
+        <h3>${produit.nom}</h3>
+        <p>${produit.description}</p>
+        <button onclick="afficherForm(${index})">Commander</button>
+      </div>
+    `;
+  });
+}
 
 function afficherForm(id) {
   const produit = produits[id];
@@ -27,12 +41,13 @@ function afficherForm(id) {
   const formContainer = document.getElementById('form-container');
 
   formContainer.innerHTML = `
-    <h2>${produit.nom}</h2>
-    <form action="https://formsubmit.co/${email}" method="POST">
-      <input type="hidden" name="produit" value="${produit.nom}">
+    <h2>Commander : ${produit.nom}</h2>
+    <form action="https://formsubmit.io/send/capber.antoine@gmail.com" method="POST">
+      <input type="hidden" name="_redirect" value="https://ton-site.github.io/merci.html">
       <input type="text" name="nom" placeholder="Votre nom" required><br>
       <input type="text" name="prenom" placeholder="Votre prénom" required><br>
       <input type="email" name="email" placeholder="Votre email" required><br>
+      <input type="hidden" name="produit" value="${produit.nom}">
       <button type="submit">Envoyer</button>
       <button type="button" onclick="fermerForm()" style="background:#e74c3c; margin-left:5px;">Annuler</button>
     </form>
@@ -45,4 +60,6 @@ function afficherForm(id) {
 function fermerForm() {
   document.getElementById('popup-form').classList.add('hidden');
   document.getElementById('blur-background').style.backdropFilter = 'blur(0px)';
-                               }
+}
+
+window.onload = afficherProduits;
