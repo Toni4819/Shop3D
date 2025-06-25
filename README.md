@@ -7,5 +7,5 @@ Bienvenue dans notre boutique spécialisée en impressions 3D. Nous proposons un
 ---
 
 **Note importante :**  
-Toute reproduction, totale ou partielle, de nos modèles, images ou contenus est strictement interdite sans autorisation préalable.
+Toute reproduction, totale ou partielle, de notre site est strictement interdite sans autorisation préalable.
 
