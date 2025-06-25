@@ -38,6 +38,21 @@ const products = [
     name: "Mini Catapulte",
     image: "https://makerworld.bblmw.com/makerworld/model/UScd5f4891b992a7/design/2024-12-27_3bdbf7341ca72.jpg?x-oss-process=image/resize,w_1000/format,webp",
     description: "2€"
+  },
+  {
+    name: "Serpent Articulé",
+    image: "https://makerworld.bblmw.com/makerworld/model/USa31350bf613edc/design/2025-05-06_50b67a19065518.jpg?x-oss-process=image/resize,w_1000/format,webp",
+    description: "1€"
+  },
+  {
+    name: "Fidget Interrupteur",
+    image: "https://makerworld.bblmw.com/makerworld/model/US8d430ecc2a1a02/design/2024-10-19_883e0da16dd1c.jpeg?x-oss-process=image/resize,w_1000/format,webp",
+    description: "1€"
+  },
+  {
+    name: "Collier Chaîne",
+    image: "https://makerworld.bblmw.com/makerworld/model/US45ec16c99aadcc/design/2023-10-12_69dcaa6d50c7f.jpg?x-oss-process=image/resize,w_1000/format,webp",
+    description: "2,5€"
   }
 ];
 
