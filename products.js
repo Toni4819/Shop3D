@@ -32,3 +32,4 @@ closePopup.addEventListener('click', () => {
   popup.classList.add('hidden');
   mainContent.classList.remove('blurred');
 });
+ 
