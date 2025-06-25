@@ -1,28 +1,62 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Shop 3D</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <h1>Mon Shop</h1>
+  <header>
+    <h1>Shop 3D</h1>
+  </header>
 
-<div id="liste-produits"></div>
+  <main>
+    <div class="products">
+      <!-- Exemple produit -->
+      <div class="product">
+        <img src="https://via.placeholder.com/300x200" alt="Produit 1" />
+        <h2>Produit 1</h2>
+        <p>Description du produit 1.</p>
+        <button class="btn-commander">Commander</button>
+      </div>
 
-<div id="blur-background"></div>
+      <div class="product">
+        <img src="https://via.placeholder.com/300x200" alt="Produit 2" />
+        <h2>Produit 2</h2>
+        <p>Description du produit 2.</p>
+        <button class="btn-commander">Commander</button>
+      </div>
 
-<div id="popup-form">
-  <h2>Commander : <span id="produit-nom"></span></h2>
-  <form id="commandeForm" action="https://formspree.io/f/mvgrvqnz" method="POST" target="_blank">
-    <input type="text" name="nom" placeholder="Nom" required />
-    <input type="text" name="prenom" placeholder="Prénom" required />
-    <input type="email" name="email" placeholder="Email" required />
-  <button type="submit">Envoyer</button>
-</form>
+      <div class="product">
+        <img src="https://via.placeholder.com/300x200" alt="Produit 3" />
+        <h2>Produit 3</h2>
+        <p>Description du produit 3.</p>
+        <button class="btn-commander">Commander</button>
+      </div>
 
-</div>
+      <div class="product">
+        <img src="https://via.placeholder.com/300x200" alt="Produit 4" />
+        <h2>Produit 4</h2>
+        <p>Description du produit 4.</p>
+        <button class="btn-commander">Commander</button>
+      </div>
+    </div>
+  </main>
 
-<script src="products.js"></script>
+  <!-- Popup Formulaire -->
+  <div class="blur-bg" id="blurBg">
+    <div class="popup">
+      <form id="commandeForm" action="https://formspree.io/f/mvgrvqnz" method="POST" target="_blank">
+        <h2>Passer commande</h2>
+        <input type="text" name="nom" placeholder="Nom" required />
+        <input type="text" name="prenom" placeholder="Prénom" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <button type="submit">Envoyer</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="products.js"></script>
 </body>
 </html>
