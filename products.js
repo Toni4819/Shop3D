@@ -18,6 +18,26 @@ const products = [
     name: "Fidget Spirale et boule",
     image: "https://makerworld.bblmw.com/makerworld/model/US14559cb8d4fac9/design/2024-11-03_ea85518054141.jpg?x-oss-process=image/resize,w_1000/format,webp",
     description: "4€"
+  },
+  {
+    name: "Baguette Pointeur",
+    image: "https://makerworld.bblmw.com/makerworld/model/USccf2d735a62a04/design/7869d0bf-0ffc-4c64-b688-0bdd49f2559c.webp?x-oss-process=image/resize,w_1000/format,webp",
+    description: "1,5€"
+  },
+  {
+    name: "Fidget Morph",
+    image: "https://makerworld.bblmw.com/makerworld/model/USb1a131172987e6/design/2024-11-14_afcd1659f051b.jpeg?x-oss-process=image/resize,w_1000/format,webp",
+    description: "2€"
+  },
+  {
+    name: "Sifflet Turbo",
+    image: "https://makerworld.bblmw.com/makerworld/model/USd260f43d512957/design/2024-12-16_0a80858defdba.jpg?x-oss-process=image/resize,w_1000/format,webp",
+    description: "3€"
+  },
+  {
+    name: "Mini Catapulte",
+    image: "https://makerworld.bblmw.com/makerworld/model/UScd5f4891b992a7/design/2024-12-27_3bdbf7341ca72.jpg?x-oss-process=image/resize,w_1000/format,webp",
+    description: "4€"
   }
 ];
 
