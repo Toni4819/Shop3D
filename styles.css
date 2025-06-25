@@ -25,12 +25,17 @@ header {
   filter: blur(6px);
 }
 
+#products {
+  display: grid;
+  grid-template-columns: repeat(4, 260px);
+  gap: 1rem;
+}
+
 .product {
   background: #fff;
   border-radius: 1rem;
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
   overflow: hidden;
-  width: 260px;
   display: flex;
   flex-direction: column;
 }
