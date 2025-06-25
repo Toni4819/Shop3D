@@ -14,12 +14,12 @@ header {
 
 .container {
   padding: 2rem;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1rem;
+  display: block; /* enlever flex */
   transition: filter 0.3s ease;
+  max-width: 100%;
+  margin: 0 auto;
 }
+
 
 .container.blurred {
   filter: blur(6px);
