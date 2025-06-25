@@ -1,42 +1,49 @@
 const products = [
   {
-    name: "Casque VR 3D",
-    description: "Casque VR confortable pour une immersion totale.",
-    image: "https://via.placeholder.com/300x200?text=Casque+VR",
+    name: "Casque VR Pro",
+    description: "Immersion totale en 3D.",
+    image: "https://via.placeholder.com/300x180"
   },
   {
-    name: "Imprimante 3D",
-    description: "Imprimante 3D de haute précision pour vos projets.",
-    image: "https://via.placeholder.com/300x200?text=Imprimante+3D",
+    name: "Imprimante 3D X1",
+    description: "Imprimez vos idées.",
+    image: "https://via.placeholder.com/300x180"
   },
   {
-    name: "Stylo 3D",
-    description: "Stylo pour dessiner en 3D avec facilité.",
-    image: "https://via.placeholder.com/300x200?text=Stylo+3D",
+    name: "Manette Haptique",
+    description: "Retour tactile avancé.",
+    image: "https://via.placeholder.com/300x180"
   },
   {
-    name: "Scanner 3D",
-    description: "Scanner portable pour créer des modèles 3D.",
-    image: "https://via.placeholder.com/300x200?text=Scanner+3D",
-  },
+    name: "Lunettes AR",
+    description: "Augmentez votre réalité.",
+    image: "https://via.placeholder.com/300x180"
+  }
 ];
 
-function displayProducts() {
-  const container = document.getElementById("products");
-  container.innerHTML = "";
-  products.forEach((p) => {
-    const productDiv = document.createElement("div");
-    productDiv.className = "product";
+const container = document.getElementById('products');
+const popup = document.getElementById('popup');
+const produitInput = document.getElementById('produitInput');
+const closePopup = document.getElementById('closePopup');
 
-    productDiv.innerHTML = `
-      <img src="${p.image}" alt="${p.name}" />
-      <h3>${p.name}</h3>
-      <p>${p.description}</p>
-      <button class="order-btn" data-product="${p.name}">Commander</button>
-    `;
-
-    container.appendChild(productDiv);
+products.forEach(prod => {
+  const card = document.createElement('div');
+  card.className = 'product';
+  card.innerHTML = `
+    <img src="${prod.image}" alt="${prod.name}">
+    <h3>${prod.name}</h3>
+    <p>${prod.description}</p>
+    <button class="order-btn">Commander</button>
+  `;
+  card.querySelector('.order-btn').addEventListener('click', () => {
+    popup.classList.remove('hidden');
+    document.body.classList.add('blurred');
+    produitInput.value = prod.name;
   });
-}
+  container.appendChild(card);
+});
 
-window.onload = displayProducts;
+closePopup.addEventListener('click', () => {
+  popup.classList.add('hidden');
+  document.body.classList.remove('blurred');
+});
