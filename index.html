@@ -1,10 +1,18 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Shop 3D</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
 <body>
+
   <header>
     <h1>Shop 3D</h1>
   </header>
 
   <div class="container" id="mainContent">
-    <div class="products-container" id="products"></div>
+    <div id="products"></div>
   </div>
 
   <div class="popup hidden" id="popup">
@@ -13,9 +21,9 @@
       <h2>Commander</h2>
       <form action="https://formspree.io/f/mvgrvqnz" method="POST">
         <input type="hidden" name="Produit" id="produitInput">
-        <input type="text" name="Nom" placeholder="Nom" required />
-        <input type="text" name="Prénom" placeholder="Prénom" required />
-        <input type="email" name="Email" placeholder="Email" required />
+        <input type="text" name="Nom" placeholder="Nom" required>
+        <input type="text" name="Prénom" placeholder="Prénom" required>
+        <input type="email" name="Email" placeholder="Email" required>
         <button type="submit">Envoyer</button>
       </form>
     </div>
@@ -23,3 +31,4 @@
 
   <script src="products.js"></script>
 </body>
+</html>
