@@ -76,6 +76,7 @@ header {
   padding: 2rem;
   box-shadow: 0 12px 28px rgba(0,0,0,0.3);
   z-index: 1000;
+  width: 320px;
 }
 
 .hidden {
