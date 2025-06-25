@@ -49,15 +49,15 @@
 
     closePopupBtn.addEventListener('click', closePopup);
 
-    // Écoute pour ouvrir popup depuis bouton commander
-    document.getElementById('products').addEventListener('click', e => {
+    // Ouvrir popup quand on clique sur un bouton Commander
+    document.getElementById('products').addEventListener('click', (e) => {
       if (e.target.classList.contains('order-btn')) {
         const productName = e.target.dataset.product;
         openPopup(productName);
       }
     });
 
-    // Envoi du formulaire avec fetch
+    // Envoi formulaire avec fetch
     commandeForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       const formData = new FormData(commandeForm);
