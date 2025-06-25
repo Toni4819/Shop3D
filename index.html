@@ -16,9 +16,20 @@
       text-decoration: none;
       border-radius: 5px;
     }
-
     .bottom-left-button:hover {
       background-color: #555;
+    }
+    .popup-product-name {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    .popup-product-image {
+      display: block;
+      max-width: 100%;
+      margin: 0 auto 15px auto;
+      border-radius: 8px;
     }
   </style>
 </head>
@@ -30,11 +41,13 @@
 
 <div id="orderPopup" class="popup hidden">
   <button class="close-btn" onclick="closePopup()">×</button>
+  <div id="popupProductName" class="popup-product-name"></div>
+  <img id="popupProductImage" class="popup-product-image" src="" alt="Produit">
   <form action="https://formspree.io/f/mvgrvqnz" method="POST" class="popup-content">
     <input type="text" name="Prénom" placeholder="Prénom" required>
     <input type="text" name="Nom" placeholder="Nom" required>
     <input type="email" name="Email" placeholder="Adresse Email" required>
-    <input type="text" name="Classe" placeholder="Classe">
+    <input type="text" name="Classe" placeholder="Classe" required>
     <input type="text" name="Infos" placeholder="Infos Supplémentaires">
     <input type="hidden" id="Produit" name="Produit">
     <button type="submit">Envoyer la commande</button>
@@ -44,10 +57,12 @@
 <a href="https://linktr.ee/Tonis_Studios" class="bottom-left-button" target="_blank">Toni's Studios ©</a>
 
 <script>
-function openPopup(productName) {
+function openPopup(productName, productImage) {
   document.getElementById("orderPopup").classList.remove("hidden");
   document.querySelector(".container").classList.add("blurred");
   document.getElementById("Produit").value = productName;
+  document.getElementById("popupProductName").textContent = productName;
+  document.getElementById("popupProductImage").src = productImage;
 }
 
 function closePopup() {
@@ -57,10 +72,6 @@ function closePopup() {
 </script>
 
 <script src="products.js"></script>
-
-</body>
-</html>
-
 
 </body>
 </html>
