@@ -1,23 +1,23 @@
 const products = [
   {
-    name: "Cube Émeraude",
-    image: "https://via.placeholder.com/260x180/2ecc71/ffffff?text=Cube+Émeraude",
-    description: "Un cube précieux vert éclatant."
+    name: "Fidget Spirale petit",
+    image: "https://cdn-acop.makeronline.com/asop/2024-10/10/webp/172850401991196900-6706e0d3dea6.webp",
+    description: "1,5€"
   },
   {
-    name: "Bloc Obsidienne",
-    image: "https://via.placeholder.com/260x180/34495e/ffffff?text=Bloc+Obsidienne",
-    description: "Solide et sombre."
+    name: "Fidget Spirale moyen",
+    image: "https://cdn-acop.makeronline.com/asop/2024-10/10/webp/172850401991196900-6706e0d3dea6.webp",
+    description: "2€"
   },
   {
-    name: "Bloc Redstone",
-    image: "https://via.placeholder.com/260x180/e74c3c/ffffff?text=Bloc+Redstone",
-    description: "Rouge et énergétique."
+    name: "Fidget Spirale grand",
+    image: "https://cdn-acop.makeronline.com/asop/2024-10/10/webp/172850401991196900-6706e0d3dea6.webp",
+    description: "3€"
   },
   {
-    name: "Cube Diamant",
-    image: "https://via.placeholder.com/260x180/3498db/ffffff?text=Cube+Diamant",
-    description: "Légendaire et étincelant."
+    name: "Fidget Spirale et boule",
+    image: "https://makerworld.bblmw.com/makerworld/model/US14559cb8d4fac9/design/2024-11-03_ea85518054141.jpg?x-oss-process=image/resize,w_1000/format,webp",
+    description: "4€"
   }
 ];
 
