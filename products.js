@@ -1,35 +1,36 @@
 const products = [
-  { name: "Casque VR Pro", description: "Immersion totale.", image: "https://via.placeholder.com/300x180" },
-  { name: "Imprimante 3D X1", description: "Imprimez vos idées.", image: "https://via.placeholder.com/300x180" },
-  { name: "Manette Haptique", description: "Retour tactile.", image: "https://via.placeholder.com/300x180" },
-  { name: "Lunettes AR", description: "Augmentez votre réalité.", image: "https://via.placeholder.com/300x180" }
+  {
+    name: "Cube Émeraude",
+    image: "https://via.placeholder.com/260x180/2ecc71/ffffff?text=Cube+Émeraude",
+    description: "Un cube précieux vert éclatant."
+  },
+  {
+    name: "Bloc Obsidienne",
+    image: "https://via.placeholder.com/260x180/34495e/ffffff?text=Bloc+Obsidienne",
+    description: "Solide et sombre."
+  },
+  {
+    name: "Bloc Redstone",
+    image: "https://via.placeholder.com/260x180/e74c3c/ffffff?text=Bloc+Redstone",
+    description: "Rouge et énergétique."
+  },
+  {
+    name: "Cube Diamant",
+    image: "https://via.placeholder.com/260x180/3498db/ffffff?text=Cube+Diamant",
+    description: "Légendaire et étincelant."
+  }
 ];
 
-const container = document.getElementById('products');
-const popup = document.getElementById('popup');
-const produitInput = document.getElementById('produitInput');
-const closePopup = document.getElementById('closePopup');
-const mainContent = document.getElementById('mainContent');
+const productsContainer = document.getElementById("products");
 
-products.forEach(prod => {
-  const card = document.createElement('div');
-  card.className = 'product';
-  card.innerHTML = `
-    <img src="${prod.image}" alt="${prod.name}">
-    <h3>${prod.name}</h3>
-    <p>${prod.description}</p>
-    <button class="order-btn">Commander</button>
+products.forEach(product => {
+  const div = document.createElement("div");
+  div.className = "product";
+  div.innerHTML = `
+    <img src="${product.image}" alt="${product.name}">
+    <h3>${product.name}</h3>
+    <p>${product.description}</p>
+    <button onclick="openPopup('${product.name}')">Commander</button>
   `;
-  card.querySelector('.order-btn').addEventListener('click', () => {
-    popup.classList.remove('hidden');
-    mainContent.classList.add('blurred');
-    produitInput.value = prod.name;
-  });
-  container.appendChild(card);
+  productsContainer.appendChild(div);
 });
-
-closePopup.addEventListener('click', () => {
-  popup.classList.add('hidden');
-  mainContent.classList.remove('blurred');
-});
- 
