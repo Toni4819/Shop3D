@@ -14,15 +14,13 @@
 
 <div id="popup-form">
   <h2>Commander : <span id="produit-nom"></span></h2>
-  <form action="https://formsubmit.io/send/a.capber@assomptioncolmar.fr" method="POST">
-    <input type="hidden" name="_redirect" value="merci.html">
-    <input type="hidden" id="produit-input" name="Produit">
-    <input type="text" name="Nom" placeholder="Votre nom" required>
-    <input type="text" name="Prénom" placeholder="Votre prénom" required>
-    <input type="email" name="Email" placeholder="Votre email" required>
-    <button type="submit">Envoyer</button>
-    <button type="button" onclick="fermerForm()">Annuler</button>
-  </form>
+  <form id="commandeForm" action="https://formspree.io/f/mvgrvqnz" method="POST" target="_blank">
+    <input type="text" name="nom" placeholder="Nom" required />
+    <input type="text" name="prenom" placeholder="Prénom" required />
+    <input type="email" name="email" placeholder="Email" required />
+  <button type="submit">Envoyer</button>
+</form>
+
 </div>
 
 <script src="products.js"></script>
