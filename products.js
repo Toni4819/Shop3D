@@ -30,7 +30,7 @@ products.forEach(product => {
     <img src="${product.image}" alt="${product.name}">
     <h3>${product.name}</h3>
     <p>${product.description}</p>
-    <button onclick="openPopup('${product.name}')">Commander</button>
+    <button onclick="openPopup('${product.name}', '${product.image}')">Commander</button>
   `;
   productsContainer.appendChild(div);
 });
