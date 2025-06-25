@@ -21,9 +21,12 @@
       <h2>Commander</h2>
       <form action="https://formspree.io/f/mvgrvqnz" method="POST">
         <input type="hidden" name="Produit" id="produitInput">
-        <input type="text" name="Nom" placeholder="Nom" required>
         <input type="text" name="Prénom" placeholder="Prénom" required>
+        <input type="text" name="Nom" placeholder="Nom" required>
         <input type="email" name="Email" placeholder="Email" required>
+        <input type="text" name="Classe" placeholder="Classe" required>
+        <input type="text" name="Infos" placeholder="Informations supplémentaires">
+        <input type="number" name="Quantité" placeholder="Quantité" min="1" value="1" required>
         <button type="submit">Envoyer</button>
       </form>
     </div>
