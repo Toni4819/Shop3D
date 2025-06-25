@@ -27,9 +27,10 @@ header {
 
 #products {
   display: grid;
-  grid-template-columns: repeat(4, 260px);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1rem;
 }
+
 
 .product {
   background: #fff;
