@@ -2,20 +2,28 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Mini Shop</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Boutique simple</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<div id="blur-background"></div>
-
 <div id="liste-produits"></div>
 
+<div id="blur-background"></div>
+
 <div id="popup-form">
-  <div id="form-container"></div>
+  <h2>Commander : <span id="produit-nom"></span></h2>
+  <form action="https://formsubmit.io/send/TON-EMAIL" method="POST">
+    <input type="hidden" name="_redirect" value="merci.html">
+    <input type="hidden" id="produit-input" name="Produit">
+    <input type="text" name="Nom" placeholder="Votre nom" required>
+    <input type="text" name="Prénom" placeholder="Votre prénom" required>
+    <input type="email" name="Email" placeholder="Votre email" required>
+    <button type="submit">Envoyer</button>
+    <button type="button" onclick="fermerForm()">Annuler</button>
+  </form>
 </div>
 
 <script src="products.js"></script>
-<script src="script.js"></script>
 </body>
 </html>
