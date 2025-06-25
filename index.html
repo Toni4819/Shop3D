@@ -11,18 +11,17 @@
     <h1>Shop 3D</h1>
   </header>
 
-  <main>
-    <div class="products" id="productsContainer"></div>
-  </main>
+  <section class="products-container" id="products"></section>
 
-  <!-- Popup Formulaire -->
-  <div class="blur-bg" id="blurBg">
-    <div class="popup">
+  <!-- Popup commande -->
+  <div id="popup" class="popup hidden">
+    <div class="popup-content">
+      <button id="closePopup" class="close-btn" title="Fermer">&times;</button>
       <form id="commandeForm" action="https://formspree.io/f/mvgrvqnz" method="POST">
         <h2>Passer commande</h2>
-        <input type="text" name="nom" placeholder="Nom" required />
-        <input type="text" name="prenom" placeholder="Prénom" required />
-        <input type="email" name="email" placeholder="Email" required />
+        <input type="text" name="Nom" placeholder="Nom" required />
+        <input type="text" name="Prénom" placeholder="Prénom" required />
+        <input type="email" name="Email" placeholder="Email" required />
         <input type="hidden" name="Produit commandé" id="produitCommande" />
         <button type="submit">Envoyer</button>
       </form>
@@ -31,62 +30,43 @@
 
   <script src="products.js"></script>
   <script>
-    const blurBg = document.getElementById('blurBg');
-    const commandeForm = document.getElementById('commandeForm');
-    const productsContainer = document.getElementById('productsContainer');
+    const popup = document.getElementById('popup');
+    const closePopupBtn = document.getElementById('closePopup');
     const produitCommandeInput = document.getElementById('produitCommande');
+    const commandeForm = document.getElementById('commandeForm');
 
-    function renderProducts() {
-      productsContainer.innerHTML = products
-        .map(
-          (p, i) => `
-        <div class="product" data-index="${i}">
-          <img src="${p.img}" alt="${p.name}" />
-          <h2>${p.name}</h2>
-          <p>${p.description}</p>
-          <button class="btn-commander">Commander</button>
-        </div>
-      `
-        )
-        .join('');
-    }
-
-    renderProducts();
-
-    let selectedProductIndex = null;
-
-    productsContainer.addEventListener('click', (e) => {
-      if (e.target.classList.contains('btn-commander')) {
-        const productDiv = e.target.closest('.product');
-        selectedProductIndex = productDiv.getAttribute('data-index');
-        produitCommandeInput.value = products[selectedProductIndex].name;
-        openPopup();
-      }
-    });
-
-    function openPopup() {
-      blurBg.style.display = 'flex';
+    function openPopup(productName) {
+      produitCommandeInput.value = productName;
+      popup.classList.remove('hidden');
+      document.body.classList.add('blurred');
     }
 
     function closePopup() {
-      blurBg.style.display = 'none';
+      popup.classList.add('hidden');
+      document.body.classList.remove('blurred');
       commandeForm.reset();
-      selectedProductIndex = null;
-      produitCommandeInput.value = '';
     }
 
-    blurBg.addEventListener('click', (e) => {
-      if (e.target === blurBg) {
-        closePopup();
+    closePopupBtn.addEventListener('click', closePopup);
+
+    // Écoute pour ouvrir popup depuis bouton commander
+    document.getElementById('products').addEventListener('click', e => {
+      if (e.target.classList.contains('order-btn')) {
+        const productName = e.target.dataset.product;
+        openPopup(productName);
       }
     });
 
+    // Envoi du formulaire avec fetch
     commandeForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       const formData = new FormData(commandeForm);
+
       const response = await fetch(commandeForm.action, {
         method: 'POST',
-        headers: { 'Accept': 'application/json' },
+        headers: {
+          'Accept': 'application/json',
+        },
         body: formData,
       });
 
