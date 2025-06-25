@@ -58,12 +58,13 @@
 
 <script>
 function openPopup(productName, productImage) {
-  document.getElementById("productTitle").textContent = productName;
-  document.getElementById("productImage").src = productImage;
+  document.getElementById("popupProductName").textContent = productName;
+  document.getElementById("popupProductImage").src = productImage;
   document.getElementById("orderPopup").classList.remove("hidden");
   document.querySelector(".container").classList.add("blurred");
-  document.getElementById("popupProductName").textContent = productName;
+  document.getElementById("Produit").value = productName;
 }
+
 
 function closePopup() {
   document.getElementById("orderPopup").classList.add("hidden");
