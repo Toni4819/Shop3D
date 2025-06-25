@@ -37,7 +37,7 @@ const products = [
   {
     name: "Mini Catapulte",
     image: "https://makerworld.bblmw.com/makerworld/model/UScd5f4891b992a7/design/2024-12-27_3bdbf7341ca72.jpg?x-oss-process=image/resize,w_1000/format,webp",
-    description: "2,5€"
+    description: "2€"
   }
 ];
 
