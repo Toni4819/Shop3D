@@ -5,9 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Shop 3D</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    .bottom-left-button {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background-color: #333;
+      color: white;
+      padding: 10px 15px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .bottom-left-button:hover {
+      background-color: #555;
+    }
+  </style>
 </head>
 <body>
-
+  
 <header>Shop 3D</header>
 
 <div class="container" id="products"></div>
@@ -21,10 +37,11 @@
     <input type="text" name="Classe" placeholder="Classe">
     <input type="text" name="Infos" placeholder="Infos Supplémentaires">
     <input type="hidden" id="Produit" name="Produit">
-  <button type="submit">Envoyer la commande</button>
-</form>
-
+    <button type="submit">Envoyer la commande</button>
+  </form>
 </div>
+
+<a href="https://tonlienici.com" class="bottom-left-button">Mon autre site</a>
 
 <script>
 function openPopup(productName) {
@@ -40,6 +57,10 @@ function closePopup() {
 </script>
 
 <script src="products.js"></script>
+
+</body>
+</html>
+
 
 </body>
 </html>
