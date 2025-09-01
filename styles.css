@@ -1,66 +1,57 @@
-/* === Fond animé sombre === */
 body {
+  font-family: Arial, sans-serif;
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  color: #e0e0e0;
-  background: linear-gradient(-45deg, #0f1c2e, #1a2a40, #0e1a2b, #142c45);
-  background-size: 400% 400%;
-  animation: gradientFlowDark 20s ease infinite;
+  padding: 0;
+  background-color: #f5f5f5;
 }
 
-@keyframes gradientFlowDark {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* === Titres === */
-h1, h2, h3 {
-  color: #00aaff;
+h1 {
   text-align: center;
-  margin-bottom: 1rem;
+  margin-top: 2rem;
+  color: #333;
 }
 
-/* === Cartes produit === */
-.card, .detail-card {
-  background: rgba(20, 30, 45, 0.85);
-  border-radius: 12px;
-  padding: 1rem;
-  max-width: 300px;
-  text-align: center;
-  box-shadow: 0 0 20px rgba(0, 170, 255, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+#packages {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.card:hover, .detail-card:hover {
-  transform: scale(1.03);
-  box-shadow: 0 0 30px rgba(0, 170, 255, 0.4);
-}
-
-/* === Images === */
-.card img, .detail-card img {
-  width: 100%;
+.card {
+  background-color: white;
   border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
 }
 
-/* === Boutons & liens === */
-.card a, .detail-card button {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.6rem 1.2rem;
-  background-color: #00aaff;
-  border: none;
-  border-radius: 6px;
-  color: #fff;
-  font-weight: bold;
-  cursor: pointer;
-  text-decoration: none;
-  transition: background 0.3s ease;
+.card:hover {
+  transform: scale(1.03);
 }
 
-.card a:hover, .detail-card button:hover {
-  background-color: #0088cc;
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
+
+.card h2 {
+  margin: 1rem;
+  font-size: 1.2rem;
+  color: #222;
+}
+
+.card p {
+  margin: 0 1rem 1rem;
+  color: #555;
+}
+
 
 /* === Détail produit === */
 .detail-info {
